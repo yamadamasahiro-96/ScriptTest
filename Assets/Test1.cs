@@ -6,19 +6,13 @@ public class Test1 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		int[] array = new int[5];
+		int[] array = {5,7,11,3,2};
 
-		array [0] = 5;
-		array [1] = 7;
-		array [2] = 11;
-		array [3] = 3;
-		array [4] = 2;
-
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < array.Length; i++) {
 			Debug.Log (array[i]);
 		}
-		for (int i = 4; i >= 0; i--) {
-			Debug.Log (array[i]);
+		for (int j =array.Length-1 ; j >= 0; j--) {
+			Debug.Log (array [j]);
 		}
 	}
 	

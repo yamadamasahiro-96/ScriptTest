@@ -19,10 +19,10 @@ public class Boss {
 		this.hp -= damage;
 	}
 
-	public  void Magic(){
-		for (int lowmp = mp; lowmp > 0; lowmp -= 5) {
-			if (lowmp >= 5) {
-				Debug.Log ("魔法攻撃をした。残りMPは" + (lowmp - 5));
+	public  void Magic(int num){
+		for (int i = 1; i<=num ; i ++) {
+			if (mp >= i*5) {
+				Debug.Log ("魔法攻撃をした。残りMPは" + (mp - (5*i)));
 			} else {
 				Debug.Log ("MPが足りないため魔法が使えない。");
 			}
@@ -41,7 +41,8 @@ public class Test : MonoBehaviour {
 		// 防御用の関数を呼び出す
 		//lastboss.Defence(3);
 
-		lastboss.Magic ();
+		//()内に魔法回数を入力
+		lastboss.Magic (11);
 
 		//Boss midboss = new Boss ();
 
