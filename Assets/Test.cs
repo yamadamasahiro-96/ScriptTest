@@ -21,11 +21,11 @@ public class Boss {
 
 	public  void Magic(){
 		if (mp >= 5) {
-			Debug.Log ("魔法攻撃をした。残りMPは" + (mp-5) );
-			} else {
-				Debug.Log ("MPが足りないため魔法が使えない。");
-			}
-		this.mp-=5;
+			this.mp -= 5;
+			Debug.Log ("魔法攻撃をした。残りMPは" + mp );
+		}else {
+			Debug.Log ("MPが足りないため魔法が使えない。");
+		}
 	}
 }
 
@@ -40,20 +40,10 @@ public class Test : MonoBehaviour {
 		// 防御用の関数を呼び出す
 		//lastboss.Defence(3);
 
-		lastboss.Magic ();
-		lastboss.Magic ();
-		lastboss.Magic ();
-		lastboss.Magic ();
-		lastboss.Magic ();
-		lastboss.Magic ();
-		lastboss.Magic ();
-		lastboss.Magic ();
-		lastboss.Magic ();
-		lastboss.Magic ();
-		lastboss.Magic ();
-
-
-
+		for (int i = 0; i < 11; i++)
+		{
+			lastboss.Magic ();
+		}
 
 
 		//Boss midboss = new Boss ();
